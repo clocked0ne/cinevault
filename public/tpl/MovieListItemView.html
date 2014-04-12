@@ -1,0 +1,6 @@
+<a href="#movies/<%= _id %>" class="thumbnail plain" style="text-align: center;">
+    <img src="<%= picture === null ? 'pics/generic.jpg' : 'pics/' + picture %>" alt="Movie still" style="max-width: 160px">
+    <h5><%= movie %></h5>
+    <%= year %><br/>
+    <i class="icon-globe"></i> <%= location %>, <%= format %>
+</a>
