@@ -30,7 +30,7 @@ var AppRouter = Backbone.Router.extend({
         var p = page ? parseInt(page, 10) : 1;
         var movieList = new MovieCollection();
 		movieList.fetch({success: function(){
-            $("#content").html(new movieListView({model: movieList, page: p}).el);
+            $("#content").html(new MovieListView({model: movieList, page: p}).el);
         }});
         this.headerView.selectMenuItem('home-menu');
     },
@@ -59,7 +59,7 @@ var AppRouter = Backbone.Router.extend({
 
 });
 
-utils.loadTemplate(['HomeView', 'HeaderView', 'MovieView', 'movieListItemView', 'AboutView'], function() {
+utils.loadTemplate(['HomeView', 'HeaderView', 'MovieView', 'MovieListItemView', 'AboutView'], function() {
     new AppRouter();
     Backbone.history.start();
 });

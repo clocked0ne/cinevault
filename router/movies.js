@@ -103,7 +103,7 @@ collection.findOne({'_id':new ObjectID(randomId)}, function(err, item) {
 };
 
 
-exports.addmovie = function(req, res) {
+exports.addMovie = function(req, res) {
     // We don't want the browser to cache the results
     res.header('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
 
@@ -123,7 +123,7 @@ if (err) {
 }
 
 
-exports.updatemovie = function(req, res) {
+exports.updateMovie = function(req, res) {
     // We don't want the browser to cache the results
     res.header('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
 
@@ -168,7 +168,7 @@ console.log(JSON.stringify(movie));
 }
 
 
-exports.deletemovie = function(req, res) {
+exports.deleteMovie = function(req, res) {
     // We don't want the browser to cache the results
     res.header('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
 
